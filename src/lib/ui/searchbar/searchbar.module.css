@@ -30,6 +30,10 @@
     background-color: var(--component-background);
   }
 
+  .input::placeholder {
+    color: var(--text-secondary);
+  }
+
   @media (max-width: 600px) {
     .container {
       padding: 3px 8px;

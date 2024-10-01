@@ -8,8 +8,13 @@ import dynamic from 'next/dynamic'
 import { useProductsTickerQuery } from '@/service';
 import { ContractType } from '@/types/products';
 import { Text, SearchBar } from '@/lib';
+import { useWindowSize } from '@/hooks';
 
 const MarketsTable = dynamic(() => import('@/lib/feature/markets-table/markets-table'), {
+    ssr: false,
+  })
+
+  const MarketsTableMobile = dynamic(() => import('@/lib/feature/markets-table/markets-table-mobile'), {
     ssr: false,
   })
 
@@ -41,6 +46,8 @@ const Markets = () => {
     );
   }, [data, search]);
 
+  const { isMobile } = useWindowSize();
+
   return (
     <>
       {
@@ -48,7 +55,9 @@ const Markets = () => {
           <>
             <SearchBar value={search} onChange={handleSearch} onClear={handleClearSearch} placeholder={t('searchBySymbol')} />
             {
-              filteredData?.length ? <MarketsTable data={filteredData} /> : <Text align='center'>{t('noResultsFound')} <strong>&quot;{search}&quot;</strong></Text>
+              filteredData?.length ? (
+                !isMobile ? <MarketsTable data={filteredData} /> : <MarketsTableMobile data={filteredData} />
+              ) : <Text align='center'>{t('noResultsFound')} <strong>&quot;{search}&quot;</strong></Text>
             }
           </>
         )

@@ -6,6 +6,10 @@
     font-size: var(--font-size-medium);
   }
 
+  .textXSmall {
+    font-size: var(--font-size-xsmall);
+  }
+
   .textLarge {
     font-size: var(--font-size-large);
   }

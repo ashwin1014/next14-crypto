@@ -13,6 +13,11 @@
             "symbol": "Symbol",
             "volume": "Volume"
         },
+        "mobileTable": {
+            "contract": "Contract",
+            "priceVolume": "Price / Vol.",
+            "change": "24h Chg."
+        },
         "termsOfService": "Terms of Service",
         "loading": "Loading..."
     }

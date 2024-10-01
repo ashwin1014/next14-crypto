@@ -2,6 +2,8 @@ import { Dispatch, SetStateAction, useCallback, useEffect, useState } from 'reac
 
 type SetValue<T> = Dispatch<SetStateAction<T>>;
 
+// Taken from https://usehooks.ts/useLocalStorage/
+
 function useLocalStorage<T>(key: string, initialValue: T): [T, SetValue<T>] {
   // Get from local storage then
   // parse stored json or return initialValue

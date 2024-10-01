@@ -32,3 +32,30 @@
       padding: 8px 10px;
     }
   }
+
+  .mobileTable {
+    width: 100%;
+    padding: 8px 10px;
+    overflow-x: auto;
+  }
+
+  .mobileTableHeader {
+    position: sticky;
+    top: -10px;
+    background-color: var(--app-background);
+    z-index: 1;
+    padding-bottom: 8px;
+  }
+
+  .mobileTableHeader, .mobileTableBodyWrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mobileTableBodyWrapper {
+    margin-bottom: 4px;
+  }
+
+  .mobileTableHeaderItem, .mobileTableBodyItem {
+    width: 33%;
+  }

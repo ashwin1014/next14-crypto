@@ -1,0 +1,19 @@
+{
+    "IndexPage": {
+        "english": "English",
+        "noResultsFound": "No results found for ",
+        "privacyPolicy": "Privacy Policy",
+        "searchBySymbol": "Search by symbol",
+        "spanish": "Spanish",
+        "table": {
+            "24hChange": "24h. Change",
+            "description": "Description",
+            "lastPrice": "Last Price",
+            "openInterest": "Open Interest",
+            "symbol": "Symbol",
+            "volume": "Volume"
+        },
+        "termsOfService": "Terms of Service",
+        "loading": "Loading..."
+    }
+}

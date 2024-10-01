@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useCallback, useEffect } from 'react'
+import React, { useCallback, useEffect, useTransition } from 'react'
+import { useRouter } from 'next/navigation';
 
 import { IoGlobeOutline } from "react-icons/io5";
 import Dropdown from '../ui/dropdown/dropdown';
@@ -13,19 +14,25 @@ const languages = [{ label: 'English', value: 'en' }, { label: 'Spanish', value:
 const LanguageDropdown = () => {
 
     const [activeLanguage, setActiveLanguage] = useLocalStorage(STORAGE_KEYS.LANGUAGE, languages[0].value);
+    const [, startTransition] = useTransition();
+    const router = useRouter();
 
     const handleLanguageChange = useCallback((item: { label: string, value: string }) => {
+       startTransition(() => {
         setActiveLanguage(item.value);
-    }, [setActiveLanguage]);
+        router.replace(`/${item.value}`);
+       })
+    }, [setActiveLanguage, router]);
 
     useEffect(() => {
         if (!activeLanguage) {
             setActiveLanguage(languages[0].value);
+            router.replace(`/${languages[0].value}`);
         }
-    }, [activeLanguage, setActiveLanguage]);
+    }, [activeLanguage, router, setActiveLanguage]);
 
     return (
-        <Dropdown title={<IoGlobeOutline size={25} />} items={languages} activeItem={activeLanguage} onChange={handleLanguageChange} />
+        <Dropdown title={<IoGlobeOutline size={25} className='text-primary' />} items={languages} activeItem={activeLanguage} onChange={handleLanguageChange} />
     )
 }
 

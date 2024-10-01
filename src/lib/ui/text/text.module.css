@@ -33,3 +33,15 @@
   .success {
     color: var(--success);
   }
+
+  .textLeft {
+    text-align: left;
+  }
+
+  .textCenter {
+    text-align: center;
+  }
+
+  .textRight {
+    text-align: right;
+  }

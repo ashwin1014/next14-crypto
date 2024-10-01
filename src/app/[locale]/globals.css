@@ -76,3 +76,11 @@ a {
 .text-xlarge {
   font-size: var(--font-size-xlarge);
 }
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}

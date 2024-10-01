@@ -3,4 +3,8 @@ enum STORAGE_KEYS {
     LANGUAGE = 'language',
 }
 
-export { STORAGE_KEYS };
+enum TRANSLATION_NAMESPACES {
+    COMMON = 'common',
+}
+
+export { STORAGE_KEYS, TRANSLATION_NAMESPACES };

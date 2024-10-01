@@ -1,0 +1,18 @@
+{
+    "IndexPage": {
+        "english": "Inglés",
+        "privacyPolicy": "Política de Privacidad",
+        "searchBySymbol": "Buscar por símbolo",
+        "spanish": "Español",
+        "table": {
+            "24hChange": "24h. Cambio",
+            "description": "Descripción",
+            "lastPrice": "Último Precio",
+            "openInterest": "Interés Abierto",
+            "symbol": "Símbolo",
+            "volume": "Volumen"
+        },
+        "termsOfService": "Términos de Servicio",
+        "loading": "Cargando..."
+    }
+}

@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--component-background);
+    border-radius: 25px;
+    padding: 5px 10px;
+    /* max-width: 40%; */
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--component-background);
+  }
+
+  .icon {
+    margin-right: 8px;
+    color: var(--text-secondary);
+    cursor: pointer;
+  }
+
+  .input {
+    border: none;
+    outline: none;
+    flex: 1;
+    border-radius: 25px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid var(--component-background);
+    background-color: var(--component-background);
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 3px 8px;
+    }
+
+    .input {
+      font-size: 14px;
+    }
+  }

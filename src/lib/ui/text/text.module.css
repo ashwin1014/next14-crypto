@@ -1,0 +1,35 @@
+.textSmall {
+    font-size: var(--font-size-small);
+  }
+
+  .textMedium {
+    font-size: var(--font-size-medium);
+  }
+
+  .textLarge {
+    font-size: var(--font-size-large);
+  }
+
+  .textXLarge {
+    font-size: var(--font-size-xlarge);
+  }
+
+  .textPrimary {
+    color: var(--text-primary);
+  }
+
+  .textSecondary {
+    color: var(--text-secondary);
+  }
+
+  .primaryColor {
+    color: var(--primary);
+  }
+
+  .error {
+    color: var(--error);
+  }
+
+  .success {
+    color: var(--success);
+  }

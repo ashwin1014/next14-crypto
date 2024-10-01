@@ -1,0 +1,28 @@
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--component-background);
+    color: var(--text-primary);
+    text-align: center;
+    margin-top: auto;
+  }
+
+  @media (min-width: 768px) {
+    .footerContainer {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .footerSection {
+    margin: 0.5rem 0;
+  }
+
+  @media (min-width: 768px) {
+    .footerSection {
+      margin: 0 1rem;
+    }
+  }

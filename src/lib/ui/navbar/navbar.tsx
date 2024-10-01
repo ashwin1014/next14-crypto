@@ -1,21 +1,25 @@
 import React from 'react'
+import { MdOutlineShowChart } from "react-icons/md";
+
 import styles from './navbar.module.css'
+import ThemeToggle from '../../feature/theme-toggle'
+import LanguageDropdown from '@/lib/feature/language-dropdown';
 
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}>Next Crypto</div>
+      <div className={styles.logo}><MdOutlineShowChart />Next Crypto</div>
       <ul className={styles.navLinks}>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><ThemeToggle /></li>
+        <li>
+          <LanguageDropdown />
+        </li>
       </ul>
-      <div className={styles.burger}>
+      {/* <div className={styles.burger}>
         <div className={styles.line1}></div>
         <div className={styles.line2}></div>
         <div className={styles.line3}></div>
-      </div>
+      </div> */}
     </nav>
   )
 }

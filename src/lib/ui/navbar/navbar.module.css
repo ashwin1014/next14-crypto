@@ -10,15 +10,20 @@
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   .navLinks {
     list-style: none;
     display: flex;
+    align-items: center;
+    gap: 0.5px;
   }
 
   .navLinks li {
-    margin: 0 1rem;
+    margin: 0.8rem;
   }
 
   .navLinks a {
@@ -39,7 +44,7 @@
     transition: all 0.3s ease;
   }
 
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .navLinks {
       display: none;
       flex-direction: column;
@@ -58,4 +63,4 @@
     .burger {
       display: block;
     }
-  }
+  } */

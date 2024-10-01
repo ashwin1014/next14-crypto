@@ -22,7 +22,9 @@ function useTheme() {
         }
     }, [theme]);
 
-    return { theme, toggleTheme };
+    const isDark = theme === ColorScheme.DARK;
+
+    return { theme, toggleTheme, isDark };
 }
 
 export default useTheme;
